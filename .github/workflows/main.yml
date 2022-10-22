@@ -13,6 +13,10 @@ jobs:
         repository: danielga/garrysmod_common
         ref: master
         path: 'garrysmod_common'
+        
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1.1
+        
     - name: Install Premake
       run: |
          curl -L https://github.com/premake/premake-core/releases/download/v5.0.0-alpha15/premake-5.0.0-alpha15-windows.zip -o premake.zip
